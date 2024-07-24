@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Your One-Stop Destination for Effortless Shopping</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>ShopEase</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.takealot.com" target="_blank">Takealot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to ShopEase</h2>
+        <p>Your one-stop destination for effortless shopping.</p>
+        <a href="categories.html" class="cta-button">Shop Now</a>
+    </section>
+
+    <section class="features">
+        <h2>Why ShopEase?</h2>
+        <div class="feature-item">
+            <h3>Extensive Product Range</h3>
+            <p>From fashion and electronics to home goods and beauty products, ShopEase has something for everyone.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Competitive Pricing</h3>
+            <p>Get the best deals on the market without compromising quality.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Fast Shipping</h3>
+            <p>Enjoy quick and reliable delivery, no matter where you are.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Secure Shopping</h3>
+            <p>Your data is protected by the latest encryption technology.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Excellent Customer Service</h3>
+            <p>Our support team is available 24/7 to assist you.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ShopEase. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Categories</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>ShopEase</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.takealot.com" target="_blank">Takealot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="categories">
+        <h2>Shop by Category</h2>
+        <ul class="category-list">
+            <li><a href="product.html?category=fashion">Fashion</a></li>
+            <li><a href="product.html?category=electronics">Electronics</a></li>
+            <li><a href="product.html?category=home-goods">Home Goods</a></li>
+            <li><a href="product.html?category=beauty-products">Beauty Products</a></li>
+            <li><a href="product.html?category=sports">Sports</a></li>
+            <!-- Add more categories as needed -->
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ShopEase. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

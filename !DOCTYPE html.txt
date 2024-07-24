@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>ShopEase</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.takealot.com" target="_blank">Takealot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="products">
+        <h2>Products</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="product-image.jpg" alt="Product Name">
+                <h3>Product Name</h3>
+                <p>$49.99</p>
+                <a href="#" class="cta-button">Buy Now</a>
+            </div>
+            <!-- Repeat for more products -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ShopEase. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

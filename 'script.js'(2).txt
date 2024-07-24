@@ -1,0 +1,6 @@
+// JavaScript for future enhancements
+document.addEventListener('DOMContentLoaded', function () {
+    console.log("ShopEase website loaded successfully!");
+    
+    // Implement product filtering or interactive features here
+});
