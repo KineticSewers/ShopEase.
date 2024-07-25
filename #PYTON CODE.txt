@@ -1,0 +1,93 @@
+# Define a class for a product
+class Product:
+    def __init__(self, id, name, price, stock):
+        self.id = id
+        self.name = name
+        self.price = price
+        self.stock = stock
+
+    def __str__(self):
+        return f"{self.name} - ${self.price} (Stock: {self.stock})"
+
+
+# Define a class for the shopping cart
+class ShoppingCart:
+    def __init__(self):
+        self.cart = {}
+
+    def add_product(self, product, quantity):
+        if product.id in self.cart:
+            self.cart[product.id]['quantity'] += quantity
+        else:
+            self.cart[product.id] = {'product': product, 'quantity': quantity}
+
+    def remove_product(self, product, quantity):
+        if product.id in self.cart:
+            if self.cart[product.id]['quantity'] <= quantity:
+                del self.cart[product.id]
+            else:
+                self.cart[product.id]['quantity'] -= quantity
+
+    def get_total(self):
+        total = 0
+        for item in self.cart.values():
+            total += item['product'].price * item['quantity']
+        return total
+
+    def __str__(self):
+        cart_contents = [f"{item['product'].name} x {item['quantity']}" for item in self.cart.values()]
+        return "Cart: " + ", ".join(cart_contents)
+
+
+# Define a simple catalog of products
+products = [
+    Product(1, "Laptop", 999.99, 10),
+    Product(2, "Smartphone", 499.99, 20),
+    Product(3, "Headphones", 199.99, 15),
+    Product(4, "Book", 9.99, 100),
+    Product(5, "Camera", 299.99, 5),
+]
+
+# Main shopping loop
+def main():
+    cart = ShoppingCart()
+    while True:
+        print("\nAvailable Products:")
+        for product in products:
+            print(product)
+        
+        choice = input("\nEnter the product ID to add to cart (or 'checkout' to proceed): ")
+
+        if choice.lower() == 'checkout':
+            break
+
+        try:
+            product_id = int(choice)
+            selected_product = next((p for p in products if p.id == product_id), None)
+            if not selected_product:
+                print("Invalid product ID. Please try again.")
+                continue
+
+            quantity = int(input(f"Enter quantity for {selected_product.name}: "))
+
+            if quantity > selected_product.stock:
+                print(f"Sorry, only {selected_product.stock} available.")
+            else:
+                cart.add_product(selected_product, quantity)
+                selected_product.stock -= quantity
+                print(f"Added {quantity} x {selected_product.name} to cart.")
+
+        except ValueError:
+            print("Please enter a valid number.")
+
+    print("\nYour Shopping Cart:")
+    print(cart)
+    print(f"Total: ${cart.get_total():.2f}")
+
+    if cart.get_total() > 0:
+        print("Proceeding to checkout...")
+    else:
+        print("Your cart is empty.")
+
+if __name__ == "__main__":
+    main()
